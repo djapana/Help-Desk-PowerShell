@@ -1,0 +1,1 @@
+﻿Get-ADComputer -SearchBase "OU=Computers,OU=Mouser North America,DC=mouser,DC=lan" -Filter  {OperatingSystem -notlike '*SERVER*'} -Properties lastlogondate,operatingsystem,distinguishedname | select name,lastlogondate,operatingsystem,distinguishedname | Export-CSV -NoType \\istxw-2y9k\c$\users\cody.read\desktop\lasttest.csv
